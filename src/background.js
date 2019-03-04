@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-undef
 chrome.webRequest.onBeforeSendHeaders.addListener(
-  function(details) {
-    for (var i = 0; i < details.requestHeaders.length; ++i) {
+  details => {
+    for (let i = 0; i < details.requestHeaders.length; i++) {
       if (details.requestHeaders[i].name === "User-Agent") {
         const originalUserAgent = details.requestHeaders[i].value;
         const fakeUserAgent = originalUserAgent.replace(
@@ -15,5 +16,5 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     return { requestHeaders: details.requestHeaders };
   },
   { urls: ["<all_urls>"] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders", "extraHeaders"]
 );
