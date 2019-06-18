@@ -1,5 +1,7 @@
 # Browser Fingerprint Protector
 
+Available in [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-fingerprint-prote/kcklikpoajnpdpjgamjfepagpdkhahpn).
+
 ## How it works
 
 The extension protects the information in `window.navigator` and HTTP request headers to complicate browser fingerprinting.
