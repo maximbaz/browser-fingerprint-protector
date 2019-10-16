@@ -23,7 +23,6 @@ Currently `Chromium` and `Google Chrome` are supported.
 
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp?utm_source=chrome-app-launcher-info-dialog)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?utm_source=chrome-app-launcher-info-dialog)
-* [Canvas Defender](https://chrome.google.com/webstore/detail/canvas-defender/obdbgnebcljmgkoljcdddaopadkifnpm?utm_source=chrome-app-launcher-info-dialog)
 
 ## Credits
 
