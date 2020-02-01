@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Browser Fingerprint Protector",
   "description": "Prevents browser fingerprinting by spoofing your plugins, languages and user agent",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage_url": "https://github.com/maximbaz/browser-fingerprint-protector",
   "author": "Maxim Baz",
   "icons": {

@@ -1,27 +1,31 @@
-CHROME := $(shell which google-chrome 2>/dev/null || which google-chrome-stable 2>/dev/null || which chromium 2>/dev/null || which chromium-browser 2>/dev/null || which chrome 2>/dev/null)
-PEM := $(shell find . -maxdepth 1 -name "*.pem")
+VERSION ?= $(shell cat .version)
+NAME = browser-fingerprint-protector
+
+CLEAN_FILES := chromium firefox dist
+CHROME := $(shell which chromium 2>/dev/null || which chromium-browser 2>/dev/null || which chrome 2>/dev/null || which google-chrome 2>/dev/null || which google-chrome-stable 2>/dev/null)
 
 .PHONY: all
-all: release
+all: dist
 
-.PHONY: crx
-crx:
-ifneq ($(PEM),)
-	"$(CHROME)" --disable-gpu --pack-extension=./src --pack-extension-key=$(PEM)
-else
-	"$(CHROME)" --disable-gpu --pack-extension=./src
-	rm ./src.pem
-endif
-	mv src.crx browser-fingerprint-protector.crx
+.PHONY: crx-webstore
+crx-webstore:
+	"$(CHROME)" --disable-gpu --pack-extension=./src --pack-extension-key=webstore.pem
+	mv src.crx $(NAME)-webstore.crx
 
 .PHONY: clean
 clean:
-	rm -rf private-release
+	rm -rf dist
 	rm -f *.crx
 
-.PHONY: release
-release: clean crx
-	mkdir -p private-release
-	cp -r src private-release
-	zip -jFS private-release/chrome.zip private-release/src/* key.pem
-	rm -rf private-release/src
+.PHONY: dist
+dist: clean crx-webstore
+	mkdir -p dist
+
+	git archive -o dist/$(NAME)-$(VERSION).tar.gz --format tar.gz --prefix=$(NAME)-$(VERSION)/ $(VERSION)
+
+	(cd src && zip -r ../dist/$(NAME)-$(VERSION).zip *)
+	mv $(NAME)-webstore.crx dist/$(NAME)-webstore-$(VERSION).crx
+
+	for file in dist/*; do \
+	    gpg --detach-sign --armor "$$file"; \
+	done
