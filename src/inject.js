@@ -3,8 +3,8 @@
 
   const originalUserAgent = window.navigator.userAgent;
   const fakeUserAgent = originalUserAgent.replace(
-    /\(.*?\)/,
-    "(Windows NT 10.0; Win64; x64)"
+    /\(.*?(?=(; rv:[^\)]+)?\))/,
+    "(Windows NT 10.0; Win64; x64"
   );
   const fakeVersion = fakeUserAgent.substr(8);
 
