@@ -20,6 +20,9 @@
   window.navigator.__defineGetter__("mimeTypes", function() {
     return { length: 0 };
   });
+  window.navigator.__defineGetter__("oscpu", function() {
+    return undefined;
+  });
   window.navigator.__defineGetter__("platform", function() {
     return "Win32";
   });
