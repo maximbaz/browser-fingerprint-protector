@@ -1,28 +1,24 @@
 # Browser Fingerprint Protector
 
-Available in [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-fingerprint-prote/kcklikpoajnpdpjgamjfepagpdkhahpn).
+Available in [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/browser-fingerprint-protector/) and [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-fingerprint-prote/kcklikpoajnpdpjgamjfepagpdkhahpn).
 
 ## How it works
 
 The extension protects the information in `window.navigator` and HTTP request headers to complicate browser fingerprinting.
 
-* Completely hides `mimeTypes` and `plugins`.
-* Pretends that you only have `English US` language.
-* Pretends that you use `Windows 10`.
+- Completely hides `mimeTypes` and `plugins`.
+- Pretends that you only have `English US` language.
+- Pretends that you use `Windows 10`.
 
 ## How to validate that it works
 
-* [whoer.net](https://whoer.net/) is a good way to see what browser is leaking. Ignore the "anonymity percentage", focus on the information that it is able to retrieve, such as languages, user agent, plugins, etc.
-* [Most Common User Agents](https://techblog.willshouse.com/2012/01/03/most-common-user-agents/) is a website that shows the current most common user agent. It is expected that with this extension your browser is listed among the first few entries in the table.
-
-## Supported browsers
-
-Currently `Chromium` and `Google Chrome` are supported.
+- [whoer.net](https://whoer.net/) is a good way to see what browser is leaking. Ignore the "anonymity percentage", focus on the information that it is able to retrieve, such as languages, user agent, plugins, etc.
+- [Most Common User Agents](https://techblog.willshouse.com/2012/01/03/most-common-user-agents/) is a website that shows the current most common user agent. It is expected that with this extension your browser is listed among the first few entries in the table.
 
 ## Other useful extensions to protect your privacy
 
-* [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp?utm_source=chrome-app-launcher-info-dialog)
-* [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?utm_source=chrome-app-launcher-info-dialog)
+- [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp?utm_source=chrome-app-launcher-info-dialog)
+- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?utm_source=chrome-app-launcher-info-dialog)
 
 ## Credits
 
