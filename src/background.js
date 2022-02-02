@@ -6,7 +6,7 @@ if (
 }
 
 chrome.webRequest.onBeforeSendHeaders.addListener(
-  details => {
+  (details) => {
     for (let i = 0; i < details.requestHeaders.length; i++) {
       if (details.requestHeaders[i].name === "User-Agent") {
         const originalUserAgent = details.requestHeaders[i].value;
