@@ -1,6 +1,8 @@
 # Browser Fingerprint Protector
 
-Available in [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/browser-fingerprint-protector/) and [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-fingerprint-prote/kcklikpoajnpdpjgamjfepagpdkhahpn).
+## This extension is no longer maintained or recommended, as I don't believe this battle can be won. To try to protect against fingerprinting attacks, consider using Tor Browser or similar projects.
+
+~Available in [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/browser-fingerprint-protector/) and [Chrome Web Store](https://chrome.google.com/webstore/detail/browser-fingerprint-prote/kcklikpoajnpdpjgamjfepagpdkhahpn).~
 
 ## How it works
 
